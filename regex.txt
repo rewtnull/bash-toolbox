@@ -1,0 +1,57 @@
+# This file contains a collection of regular expressions of different complexity
+# and which you can use for your projects if you wish. Some of these are in perl
+# syntax, and require libpcre if you intend to use them with the grep -P option.
+#
+# <marcus.hoffren@gmail.com> for inquiries
+#
+
+
+
+# Use   : grep numbers surrounded by other numbers
+# Type  : Perl regex
+# Source: Me
+#
+# These examples utilise the date command, assuming the argument format '+%d%m%Y%V'
+# (day/month/year/week). See the date manpage for more information
+
+# grep the first two digits
+day=$(date '+%d%m%Y%V' | grep -oP '^\d{2}')
+
+# grep the last two digits
+week=$( date '+%d%m%Y%V' | grep -oP '\d{2}$')
+
+# Using lookaround assertions to grep two digits if preceded by two digits and followed by six digits
+month=$( date '+%d%m%Y%V' | grep -oP '(?<=\d{2})\d{2}(?=\d{6})')
+
+# Using lookaround assertions to grep four digits if preceded by four digits and followed by two digits
+year=$( date '+%d%m%Y%V' | grep -oP '(?<=\d{4})\d{4}(?=\d{2})')
+
+
+
+# Use   : get number of files from file_id.diz
+# Type  : Perl regex
+# Source: Me
+#
+# See http://en.wikipedia.org/wiki/FILE_ID.DIZ for more information
+#
+
+# a) Replacing o &| O to 0, and X to x using sed
+# b) Using lookaround assertions to capture known format combinations of number of disks
+cat file_id.diz | sed 'y/oOX/00x/' | \
+grep -oP '(?<![\dxX]{2}[-/|\\+])[\dxX]{2}\s?[-/|\\+]\s?[\dxX]{2}(?![-/|\\+][\dxX]{2})'
+
+
+
+# Use   : get date from file_id.diz
+# Type  : Perl regex
+# Source: Me
+#
+# See http://en.wikipedia.org/wiki/FILE_ID.DIZ for more information
+#
+
+# a) Replacing o &| O to 0, and X to x using sed
+# b) Capturing date, starting or ending with year in either two or four digit format
+cat file_id.diz | sed 'y/oOX/00x/' | grep -oP '\d{2,4}\D?\d{2}\D?\d{2,4}'
+
+
+
