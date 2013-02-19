@@ -9,4 +9,4 @@ taca () {
 }
 
 taca "$1"
-#    [[ IFS= read -r line ]] && { tails; echo "${line}"; }
+#    [[ IFS= read -r line ]] && { taca; echo "${line}"; }

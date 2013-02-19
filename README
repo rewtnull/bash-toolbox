@@ -10,39 +10,39 @@ bash_version.sh
 ===============
 
 Bash version sanity check. Put this line where dependency/sanity checking is
-done in your script.
+done in your script
 
 collapse.sh
 ===========
 
-Rudimentary basename as a bash internal.
+Rudimentary basename as a bash internal
 
 duplicate.sh
 ============
 
-reads argument to array, returns duplicates of each element of array.
+Reads argument to array, returns duplicates of each element of array
 
 expand.sh
 =========
 
-Reversed basename. Adds path to filename.
+Reversed basename. Adds path to filename
 
 expand_either.sh
 ================
 
-Expand first of found arguments.
+Expand first of found arguments
 
 gtoe.sh
 =======
 
-Greater than or equal for string comparisons.
+Greater than or equal for string comparisons
 
 numblist.sh
 ===========
 
-Returns numbered list of input arguments.
+Returns numbered list of input arguments
 
 taca.sh
 =======
 
-Simple recursive tac like function. Reverse line order of input.
+Simple recursive tac like function. Reverse line order of input
