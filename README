@@ -15,7 +15,7 @@ done in your script
 collapse.sh
 ===========
 
-Rudimentary basename as a bash internal
+Rudimentary basename
 
 duplicate.sh
 ============
@@ -37,6 +37,13 @@ gtoe.sh
 
 Greater than or equal for string comparisons
 
+
+error_handler.sh
+================
+
+Sends errors to STDERR
+
+
 numblist.sh
 ===========
 
@@ -46,3 +53,9 @@ taca.sh
 =======
 
 Simple recursive tac like function. Reverse line order of input
+
+
+verbose.sh
+==========
+
+Small function to handle verbosity
