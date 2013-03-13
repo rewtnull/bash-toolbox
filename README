@@ -12,25 +12,30 @@ bash_version.sh
 Bash version sanity check. Put this line where dependency/sanity checking is
 done in your script
 
+
 collapse.sh
 ===========
 
 Rudimentary basename
+
 
 duplicate.sh
 ============
 
 Reads argument to array, returns duplicates of each element of array
 
+
 expand.sh
 =========
 
 Reversed basename. Adds path to filename
 
+
 expand_either.sh
 ================
 
 Expand first of found arguments
+
 
 gtoe.sh
 =======
@@ -44,15 +49,22 @@ error_handler.sh
 Sends errors to STDERR
 
 
+max.sh
+======
+
+Returns lexicographically largest element of an array
+
+
 numblist.sh
 ===========
 
 Returns numbered list of input arguments
 
+
 taca.sh
 =======
 
-Simple recursive tac like function. Reverse line order of input
+Recursive tac like function. Reverse line order of input
 
 
 verbose.sh

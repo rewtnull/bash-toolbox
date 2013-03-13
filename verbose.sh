@@ -2,7 +2,7 @@
 verbose="1"
 verbose_mode() {
     case ${verbose} in
-	0) { echo -e "${@}" 1> /dev/null; };;
+	0) ;;
 	1) { echo -e "${@}"; };;
     esac
 }
