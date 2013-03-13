@@ -13,6 +13,8 @@ max() {
 	for (( i=0; i < ${#dates[@]}; i++ )); do
 	    gtoe "${dates[$i]}" "${largest}" && largest="${dates[$i]}"
 	done
+    else
+	largest="${dates[0]}"
     fi
     echo "$largest"
 }
