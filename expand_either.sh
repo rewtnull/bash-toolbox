@@ -1,6 +1,9 @@
-# Expands first of found arguments. Accept any, return first
-# In this example it uses my expand() function. You can change
-# expand to type -p on row 6.
+#!/bin/bash
+# expand_either.sh - Expands first of found arguments
+
+. expand.sh # Include expand from bash-toolbox. You can change expand to type -p on row 10
+
+# expand_either($@ => $result)
 expand_either() {
     for arg in ${@}; do
 	local result=$(expand "${arg}") # fc

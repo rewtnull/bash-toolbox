@@ -1,4 +1,4 @@
-# Recursive tac like function. Reverse line order of input
+# taca.sh - Recursive tac like function. Reverse line order of input
 # Usage: taca < filename / cat filename | taca.sh ...
 taca () {
     local line
