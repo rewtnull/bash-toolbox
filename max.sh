@@ -8,13 +8,13 @@ dates=( 1998-02-12 2003-01-24 2013-03-24 2120-11-11 2010-10-14 2001-11-01 1993-1
 
 # max(${array[@]} => $largest)
 max() {
-    local dates=( "$@" )
-    if (( ${#dates[@]} > "1" )); then # If array consists of one single element it's already the largest one
-	for (( i=0; i < ${#dates[@]}; i++ )); do
-	    gtoe "${dates[$i]}" "${largest}" && largest="${dates[$i]}"
+    local array=( "$@" )
+    if (( ${#array[@]} > "1" )); then # If array consists of one single element it's already the largest one
+	for (( i=0; i < ${#array[@]}; i++ )); do
+	    gtoe "${array[$i]}" "${largest}" && largest="${array[$i]}"
 	done
     else
-	largest="${dates[0]}"
+	largest="${array[0]}"
     fi
     echo "$largest"
 }
