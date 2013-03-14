@@ -1,10 +1,12 @@
-# reads $1 to array, returns duplicates of each element of array
-# Accept $1, return ${1[N]} ${1[N]}
+#!/bin/bash
+# duplicate.sh - Reads N arguments, returns duplicate of each argument
+
+# duplicate($@ => $@*2)
 duplicate() {
-    [[ ${1} != "" ]] && chars = ( $( < ${1} ) ) || exit 1
-    for (( i = 0; "${i}" < "${#chars[@]}"; i++ )); do
+    [[ ${@} != "" ]] && chars=( ${@} ) || exit 1
+    for (( i = 0; i < "${#chars[@]}"; i++ )); do
 	echo "${chars[${i}]} ${chars[${i}]}"
     done
     exit 0
 }
-duplicate "$1"
+duplicate "$@"
