@@ -24,6 +24,10 @@ duplicate.sh
 
 Reads argument to array, returns duplicates of each element of array
 
+except.sh
+=========
+
+Returns first element > 0 from ${PIPESTATUS[@]} and exits
 
 expand.sh
 =========
@@ -48,12 +52,10 @@ error_handler.sh
 
 Sends errors to STDERR
 
-
-max.sh
+largest.sh
 ======
 
-Returns lexicographically largest element of an array
-
+Returns lexicographically largest element of array
 
 numblist.sh
 ===========
