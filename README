@@ -3,7 +3,7 @@
 #
 # See regex.txt for info about the various regular expressions.
 #
-# Contact <marcus.hoffren@gmail.com> for inquiries
+# Contact <marcus@harikazen.com> for inquiries
 #
 
 bash_version.sh
@@ -24,10 +24,12 @@ duplicate.sh
 
 Reads argument to array, returns duplicates of each element of array
 
+
 except.sh
 =========
 
 Returns first element > 0 from ${PIPESTATUS[@]} and exits
+
 
 expand.sh
 =========
@@ -52,15 +54,35 @@ error_handler.sh
 
 Sends errors to STDERR
 
+
 largest.sh
 ======
 
 Returns lexicographically largest element of array
 
+
+missing.sh
+======
+
+Checks if ${1} is missing, tells ${2} is required, exits
+
+
+next.sh
+===========
+
+Inspired by the python .next() method. For each function call returns the next element from input array
+
+
 numblist.sh
 ===========
 
 Returns numbered list of input arguments
+
+
+prev.sh
+===========
+
+Inspired by the python .next() method but reverses the results. For each function call returns the previous element from input array
 
 
 taca.sh
